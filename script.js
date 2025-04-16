@@ -30,7 +30,7 @@ window.onload = function() {
 
   // Show initial greeting message
   function greeting() {
-    alert("Click OK to view the pantheon!");
+    alert("click OK to view the pantheon!");
   }
 
   // Draws a 10x10 grid on the canvas
@@ -111,16 +111,16 @@ window.onload = function() {
       drawPantheon(() => {
         // Step 2: Wait a moment so images appear BEFORE blocking with prompt
         setTimeout(() => {
-          let response = prompt("Which deity would you like to convene with through divination?");
+          let response = prompt("which deity would you like to convene with through divination?");
           if (!response) return;
           chosenDeity = response.toLowerCase();
 
           if (!acceptedDeities.includes(chosenDeity)) {
-            alert("Invalid choice. Try again.");
+            alert("invalid choice. try again.");
             return;
           }
 
-          alert("Click OK to divine.");
+          alert("click OK to divine.");
           ctx.clearRect(0, 0, width, height);
           drawGrid();
           positions = generateRandomPositions();
@@ -141,9 +141,9 @@ window.onload = function() {
             const offering = offerResponse.toLowerCase();
 
             if (offerings[chosenDeity].includes(offering)) {
-              alert(`Congratulations! ${chosenDeity.toUpperCase()} accepted your offering. Game complete.`);
+              alert(`congratulations! ${chosenDeity} accepted your offering. game complete.`);
             } else {
-              alert(`${chosenDeity.toUpperCase()} is not pleased with that offering. Try again next time.`);
+              alert(`hmm... ${chosenDeity} is not pleased with that offering. try again next time.`);
             }
 
             questionAsked = true;
