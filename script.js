@@ -70,14 +70,20 @@ window.onload = function() {
 
   // Draws deity icons on the canvas
   function drawPantheon() {
-    let i = 0;
+    let loadedcount = 0;
+    const totalDeities = Object.keys(deityImages).length;
+    
     for (let deity in deityImages) {
       const img = new Image();
       img.src = deityImages[deity];
-      const x = (i % 2) * 200;
-      const y = Math.floor(i / 2) * 200;
-      img.onload = () => ctx.drawImage(img, x, y, 100, 100);
-      i++;
+      img.onload = () => {
+        const i = Object.keys(deityImages).indexOf(deity);
+        const x = (i % 2) * 200;
+        const y = Math.floor(i / 2) * 200;
+      ctx.drawImage(img, x, y, 100, 100);
+      
+      loadedCount++;
+      };
     }
   }
 
