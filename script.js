@@ -70,7 +70,7 @@ window.onload = function() {
 
   // Draws deity icons on the canvas
   function drawPantheon() {
-    let loadedcount = 0;
+    let loadedCount = 0;
     const totalDeities = Object.keys(deityImages).length;
     
     for (let deity in deityImages) {
