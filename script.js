@@ -84,9 +84,20 @@ window.onload = function() {
         if (loaded === deities.length) {
           // All images loaded, now draw them
           images.forEach((img, j) => {
-            const x = (j % 2) * 200;
-            const y = Math.floor(j / 2) * 200;
-            ctx.drawImage(img, x, y, 100, 100);
+            const gridCols = 2;
+            const imgWidth = cellSize;
+            const imgHeight = cellSize;
+
+            const col = j % gridCols;
+            const row = Math.floor(j / gridCols);
+
+            const gridX = col * (width / gridCols) / cellSize; // convert to grid units
+            const gridY = row * (height / 3) / cellSize; // 3 rows max
+
+            const centerX = gridX * cellSize + (cellSize - imgWidth) / 2;
+            const centerY = gridY * cellSize + (cellSize - imgWidth) / 2;
+
+            ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
           });
 
           if (callback) callback();
