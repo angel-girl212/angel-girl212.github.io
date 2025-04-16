@@ -1,1 +1,10 @@
+body {
+  background-color: #fdf6f0;
+  font-family: "Verdana", sans-serif;
+  text-align: center;
+}
 
+canvas {
+  border: 2px solid black;
+  margin-top: 20px;
+}
