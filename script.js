@@ -9,10 +9,10 @@ window.onload = function() {
 
   // Load deity images
   const deityImages = {
-    "pomba gira": "assets/pombagira.png",
-    "erzuli freda": "assets/erzulifreda.png",
-    "erzuli danto": "assets/erzulidanto.png",
-    "oshun": "assets/oshun.png",
+    "pomba gira": "assets/pombagira.PNG",
+    "erzuli freda": "assets/erzulifreda.PNG",
+    "erzuli danto": "assets/erzulidanto.PNG",
+    "oshun": "assets/oshun.PNG",
     "kyra": "assets/me.jpg",
   };
 
