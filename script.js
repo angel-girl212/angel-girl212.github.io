@@ -69,22 +69,29 @@ window.onload = function() {
   }
 
   // Draws deity icons on the canvas
-  function drawPantheon() {
-    let loadedCount = 0;
-    const totalDeities = Object.keys(deityImages).length;
-    
-    for (let deity in deityImages) {
+  function drawPantheon(callback) {
+    const deities = Object.keys(deityImages);
+    const images = [];
+    let loaded = 0;
+
+    deities.forEach((deity, i) => {
       const img = new Image();
       img.src = deityImages[deity];
+
       img.onload = () => {
-        const i = Object.keys(deityImages).indexOf(deity);
-        const x = (i % 2) * 200;
-        const y = Math.floor(i / 2) * 200;
-      ctx.drawImage(img, x, y, 100, 100);
-      
-      loadedCount++;
+        images[i] = img;
+        loaded++;
+        if (loaded === deities.length) {
+          // All images loaded, now draw them
+          images.forEach((img, j) => {
+            const x = (j % 2) * 200;
+            const y = Math.floor(j / 2) * 200;
+            ctx.drawImage(img, x, y, 100, 100);
+          });
+          if (callback) callback();
+        }
       };
-    }
+    });
   }
 
   // Main game interaction
@@ -92,8 +99,8 @@ window.onload = function() {
     if (!questionAsked) {
       greeting();
       ctx.clearRect(0, 0, width, height);
-      drawPantheon();
-
+      drawPantheon(() => {
+      // this will run after the pantheon is fully drawn
       chosenDeity = prompt("Which deity would you like to convene with through divination?")?.toLowerCase();
       if (!acceptedDeities.includes(chosenDeity)) {
         alert("Invalid choice. Try again.");
