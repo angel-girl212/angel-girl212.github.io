@@ -68,7 +68,6 @@ window.onload = function() {
     }
   }
 
-  // Draws deity icons on the canvas
   function drawPantheon(callback) {
     const deities = Object.keys(deityImages);
     const images = [];
@@ -81,6 +80,7 @@ window.onload = function() {
       img.onload = () => {
         images[i] = img;
         loaded++;
+
         if (loaded === deities.length) {
           // All images loaded, now draw them
           images.forEach((img, j) => {
@@ -88,11 +88,12 @@ window.onload = function() {
             const y = Math.floor(j / 2) * 200;
             ctx.drawImage(img, x, y, 100, 100);
           });
+
           if (callback) callback();
         }
       };
     });
-  }
+  }  
 
   // Main game interaction
   canvas.addEventListener("click", () => {
