@@ -13,7 +13,7 @@ window.onload = function() {
     "erzuli freda": "assets/erzulifreda.PNG",
     "erzuli danto": "assets/erzulidanto.PNG",
     "oshun": "assets/oshun.PNG",
-    "kyra": "assets/me.jpg"
+    "kyra": "assets/kyra.JPG"
   };
 
   // Load cowry shell image
