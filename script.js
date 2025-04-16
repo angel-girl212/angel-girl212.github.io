@@ -18,7 +18,7 @@ window.onload = function() {
 
   // Load cowry shell image
   const cowryShellImg = new Image();
-  cowryShellImg.src = "assets/cowry_shell.png";
+  cowryShellImg.src = "assets/pngegg.png";
 
   // Accepted deities list
   const acceptedDeities = Object.keys(deityImages);
