@@ -100,9 +100,14 @@ window.onload = function() {
     if (!questionAsked) {
       greeting();
       ctx.clearRect(0, 0, width, height);
+      
+      // call drawPantheon and wait for images to load
       drawPantheon(() => {
         // this will run after the pantheon is fully drawn
-        chosenDeity = prompt("Which deity would you like to convene with through divination?")?.toLowerCase();
+        let response = prompt("Which deity would you like to convene with through divination?");
+        if (!response) return;
+        chosenDeity = response.toLowerCase();
+
         if (!acceptedDeities.includes(chosenDeity)) {
           alert("Invalid choice. Try again.");
           return;
@@ -114,8 +119,6 @@ window.onload = function() {
         positions = generateRandomPositions();
         drawShells(positions);
 
-        const offering = prompt(`Congratulations! ${chosenDeity.toUpperCase()} would like to speak with you. What will you offer them?`)?.toLowerCase();
-
         const offerings = {
           "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne"],
           "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans"],
@@ -123,6 +126,10 @@ window.onload = function() {
           "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
           "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
         };
+
+        let offerResponse = prompt(`Congratulations! ${chosenDeity.toUpperCase()} would like to speak with you. What will you offer them?`);
+        if (!offerResponse) return;
+        const offering = offerResponse.toLowerCase();
 
         if (offerings[chosenDeity].includes(offering)) {
           alert(`Congratulations! ${chosenDeity.toUpperCase()} accepted your offering. Game complete.`);
