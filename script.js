@@ -82,22 +82,17 @@ window.onload = function() {
         loaded++;
 
         if (loaded === deities.length) {
-          // All images loaded, now draw them
+          // Calculate total width of all images
+          const totalWidth = images.length * 100;
+
+          // calculate starting position to centre the image
+          const startX = (width - totalWidth) / 2;
+
+          // draw each image
           images.forEach((img, j) => {
-            const gridCols = 2;
-            const imgWidth = cellSize;
-            const imgHeight = cellSize;
-
-            const col = j % gridCols;
-            const row = Math.floor(j / gridCols);
-
-            const gridX = col * (width / gridCols) / cellSize; // convert to grid units
-            const gridY = row * (height / 3) / cellSize; // 3 rows max
-
-            const centerX = gridX * cellSize + (cellSize - imgWidth) / 2;
-            const centerY = gridY * cellSize + (cellSize - imgWidth) / 2;
-
-            ctx.drawImage(img, centerX, centerY, imgWidth, imgHeight);
+            const x = startX + j * 100;
+            const y = height / 2 - 50;
+            ctx.drawImage(img, x, y, 100, 100);
           });
 
           if (callback) callback();
