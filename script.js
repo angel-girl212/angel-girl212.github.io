@@ -101,36 +101,37 @@ window.onload = function() {
       greeting();
       ctx.clearRect(0, 0, width, height);
       drawPantheon(() => {
-      // this will run after the pantheon is fully drawn
-      chosenDeity = prompt("Which deity would you like to convene with through divination?")?.toLowerCase();
-      if (!acceptedDeities.includes(chosenDeity)) {
-        alert("Invalid choice. Try again.");
-        return;
-      }
+        // this will run after the pantheon is fully drawn
+        chosenDeity = prompt("Which deity would you like to convene with through divination?")?.toLowerCase();
+        if (!acceptedDeities.includes(chosenDeity)) {
+          alert("Invalid choice. Try again.");
+          return;
+        }
 
-      alert("Click OK to divine.");
-      ctx.clearRect(0, 0, width, height);
-      drawGrid();
-      positions = generateRandomPositions();
-      drawShells(positions);
+        alert("Click OK to divine.");
+        ctx.clearRect(0, 0, width, height);
+        drawGrid();
+        positions = generateRandomPositions();
+        drawShells(positions);
 
-      const offering = prompt(`Congratulations! ${chosenDeity.toUpperCase()} would like to speak with you. What will you offer them?`)?.toLowerCase();
+        const offering = prompt(`Congratulations! ${chosenDeity.toUpperCase()} would like to speak with you. What will you offer them?`)?.toLowerCase();
 
-      const offerings = {
-        "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne"],
-        "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans"],
-        "erzuli danto": ["hot fruits", "fried pork", "red wine", "reve d'or perfume", "chodye"],
-        "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
-        "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
-      };
+        const offerings = {
+          "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne"],
+          "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans"],
+          "erzuli danto": ["hot fruits", "fried pork", "red wine", "reve d'or perfume", "chodye"],
+          "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
+          "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
+        };
 
-      if (offerings[chosenDeity].includes(offering)) {
-        alert(`Congratulations! ${chosenDeity.toUpperCase()} accepted your offering. Game complete.`);
-      } else {
-        alert(`${chosenDeity.toUpperCase()} is not pleased with that offering. Try again next time.`);
-      }
+        if (offerings[chosenDeity].includes(offering)) {
+          alert(`Congratulations! ${chosenDeity.toUpperCase()} accepted your offering. Game complete.`);
+        } else {
+          alert(`${chosenDeity.toUpperCase()} is not pleased with that offering. Try again next time.`);
+        }
 
-      questionAsked = true;
+        questionAsked = true;
+      });
     }
   });
 };
