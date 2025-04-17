@@ -129,9 +129,9 @@ window.onload = function() {
           // Step 3: Wait a moment so the divination grid & shells appear BEFORE next prompt
           setTimeout(() => {
             const offerings = {
-              "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne"],
-              "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans"],
-              "erzuli danto": ["hot fruits", "fried pork", "red wine", "reve d'or perfume", "chodye"],
+              "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne", "alcohol", "tobacco products"],
+              "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans", "mirrors", "champagne"],
+              "erzuli danto": ["hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
               "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
               "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
             };
