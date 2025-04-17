@@ -11,7 +11,7 @@ window.onload = function() {
   const deityImages = {
     "pomba gira": "assets/pombagira.PNG",
     "erzuli freda": "assets/erzulifreda.PNG",
-    "erzuli danto": "assets/erzulidanto.PNG",
+    "erzuli dantor": "assets/erzulidanto.PNG",
     "oshun": "assets/oshun.PNG",
     "kyra": "assets/kyra.JPG"
   };
@@ -131,7 +131,7 @@ window.onload = function() {
             const offerings = {
               "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne", "alcohol", "tobacco products"],
               "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans", "mirrors", "champagne"],
-              "erzuli danto": ["hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
+              "erzuli dantor": ["hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
               "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
               "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
             };
