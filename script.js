@@ -129,11 +129,11 @@ window.onload = function() {
           // Step 3: Wait a moment so the divination grid & shells appear BEFORE next prompt
           setTimeout(() => {
             const offerings = {
-              "pomba gira": ["red candles", "roses", "perfume", "cosmetics", "champagne", "alcohol", "tobacco products"],
+              "pomba gira": ["red candle","red candles", "roses", "perfume", "cosmetics", "champagne", "alcohol", "tobacco products"],
               "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans", "mirrors", "champagne"],
-              "erzuli dantor": ["hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
+              "erzuli dantor": ["hot fruit", "hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
               "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
-              "kyra": ["fresh fruits", "flowers", "good luck charms", "perfume", "champagne"]
+              "kyra": ["fresh fruit", "flowers", "good luck charms", "perfume", "champagne"]
             };
 
             let offerResponse = prompt(`Congratulations! ${chosenDeity} would like to speak with you. What will you offer them?`);
