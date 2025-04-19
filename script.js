@@ -131,7 +131,7 @@ window.onload = function() {
             const offerings = {
               "pomba gira": ["red candle","red candles", "roses", "perfume", "cosmetics", "champagne", "alcohol", "tobacco products"],
               "erzuli freda": ["fine items", "makeup", "perfume", "sweets", "fans", "mirrors", "champagne"],
-              "erzuli dantor": ["hot fruit", "hot fruits", "pineapples", "oranges", "mangoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
+              "erzuli dantor": ["hot fruit", "hot fruits", "pineapple", "orange", "mangoe", "pineapples", "oranges", "magoes", "fried pork", "red wine", "reve d'or perfume", "chodye twya pye"],
               "oshun": ["honey", "pumpkin", "peacock", "vulture", "sunflower"],
               "kyra": ["fresh fruit", "flowers", "good luck charms", "perfume", "champagne"]
             };
