@@ -136,7 +136,7 @@ window.onload = function() {
               "kyra": ["fresh fruit", "flowers", "good luck charms", "perfume", "champagne"]
             };
 
-            let offerResponse = prompt(`Congratulations! ${chosenDeity} would like to speak with you. What will you offer them?`);
+            let offerResponse = prompt(`congratulations! ${chosenDeity} would like to speak with you. what will you offer them?`);
             if (!offerResponse) return;
             const offering = offerResponse.toLowerCase();
 
